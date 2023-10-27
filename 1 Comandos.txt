@@ -1,0 +1,17 @@
+# Hello World
+docker run hello-world	
+
+# Processos (Linux)
+ps				
+
+# Lista containers em execução
+docker container ps				
+
+# Listar todos containers
+docker container ps -a				
+
+# Inicia um container Debian em modo interativo (terminal) com o nome "mydeb"
+docker container run --name mydeb -it debian bash
+
+# Anexa um container específico (mydeb) e inicia em modo interativo
+docker container start -ai mydeb
