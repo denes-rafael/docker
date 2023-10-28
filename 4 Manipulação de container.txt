@@ -1,0 +1,8 @@
+# Exibir log
+docker container logs daemon-basic
+
+# Inspeção (detalhes de container - características)
+docker container inspect damon-basic
+
+# Executar comandos
+docker container exec daemon-basic uname -or
