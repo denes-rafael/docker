@@ -1,0 +1,12 @@
+# Iniciar
+docker container start daemon-basic
+
+# Verificar estado
+docker container ps
+
+# Reiniciar
+docker container restart daemon-basic
+
+# Parar container 
+docker container stop daemon-basic
+docker container stop (id)
