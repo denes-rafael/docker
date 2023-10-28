@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daemon</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll()</script>
+</head>
+
+<body style="padding: 1%;">
+
+    <h3>Daemon server</h3>
+
+    <p>• Executar o container em modo background</p>
+    <pre><code> 
+        docker container run -d --name daemon-basic -p 80:80 -v ${pwd}:/usr/share/nginx/html nginx 
+    </code></pre>
+
+    <p>• Verificar containeres em execução</p>
+    <pre><code>
+        docker container ps
+    </code></pre>
+
+    <p>• Parar container</p>
+    <pre><code>
+        docker container stop daemon-basic
+    </code></pre>
+</body>
+
+</html>
