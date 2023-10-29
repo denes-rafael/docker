@@ -1,0 +1,23 @@
+# Todos comandos começam com 
+docker image
+
+# Baixar uma imagem do hub
+docker imagem pull
+
+# Listar imagens
+docker image ls
+
+# Remover
+docker image rm #has | #tag
+
+# Informações sobre a imagem
+docker image inspect 
+
+# Adicionar tag
+docker image tag #fonte #tagdesejada
+
+# Criar
+docker image build
+
+# Publicar 
+docker image push
