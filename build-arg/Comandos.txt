@@ -1,0 +1,8 @@
+# Constuir imagem na pasta atual
+docker image build -t build-arg .
+
+# Executar 
+docker container run build-arg bash -c 'echo $S3_BUCKET'
+
+# Alterar argumento
+docker image build --build-arg S3_BUCKET=myApp -t build-arg .
