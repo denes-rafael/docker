@@ -1,0 +1,8 @@
+# Criar imagem baseada no Dockerfile na pasta atual
+docker image build -t simple-build .
+
+# Verificar se a imagem foi criada
+docker image ls
+
+# Executar a imagem
+docker container run -p 80:80 simple-build
