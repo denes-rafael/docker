@@ -1,0 +1,5 @@
+docker network ls
+
+bridge  - a partir da camada docker
+host    - a partir do sistema operacional
+none    - sem rede
