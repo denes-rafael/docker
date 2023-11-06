@@ -1,0 +1,5 @@
+docker image build -t build-dev . 
+docker container run -it -v ${pwd}:/app -p 80:8000 --name python-server build-dev
+
+# Ler volume a partir de outro
+docker container run -it --volumes-from=python-server debian cat /log/http-server.log
