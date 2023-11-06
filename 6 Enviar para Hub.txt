@@ -1,0 +1,3 @@
+docker image tag debian 1denesrafael/debian:1.0
+docker login --username=denes.rafael@gmail.com
+docker image push 1denesrafael/debian:1.0
