@@ -1,0 +1,36 @@
+# Criar nova rede
+docker network create --driver bridge rede_nova
+
+# Verificar se a rede foi criada
+docker network ls
+
+# Inspecionar a rede
+docker network inspect rede_nova
+
+## Teste conectividade
+# Criar dois containeres na rede padrão
+docker container run -d --name container1 alpine sleep 1000
+docker container run -d --name container2 alpine sleep 1000
+
+## Modo interativo
+# Verificar endereço de rede
+docker container exec -it container1 ifconfig
+
+# Ping para outro container
+docker container exec -it container1 ping 172.17.0.3
+docker container exec -it container2 ping 172.17.0.2
+
+# Novo container na nova rede
+docker container run -d --name container3 --net rede_nova alpine sleep 1000
+
+# Verificar ip do novo container
+docker container exec -it container3 ifconfig
+
+# Adicionar o container 3 a rede padrão (bridge)
+docker network connect bridge container3
+
+# Testar com ping
+docker container exec -it container3 ping 172.17.0.2
+
+# Desconectar container 3 da rede bridge
+docker network disconnect bridge container3

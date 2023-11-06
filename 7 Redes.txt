@@ -1,0 +1,15 @@
+docker network ls
+
+bridge  - a partir da camada docker
+host    - a partir do sistema operacional
+none    - sem rede
+
+# Executa um container com a rede bridge, lista as interfaces e remove após execução
+
+docker container run --rm alpine ash -c "ifconfig" 
+
+# Executar container sem rede - none
+docker container run --rm --net none alpine ash -c "ifconfig" 
+
+# Inspecionar rede
+docker network inspect bridge
