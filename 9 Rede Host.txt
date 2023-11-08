@@ -1,0 +1,5 @@
+# Criar container modo host
+docker container run -d --name container4 --net host alpine sleep 1000
+
+# Executar 
+docker container exec -it container4 ifconfig
