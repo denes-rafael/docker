@@ -1,0 +1,14 @@
+# Iniciar docker-compose em modo deamon
+docker-compose up -d
+
+# Verificar processos
+docker-compose ps
+
+# Executar comando no postgres para listar tabelas existentes
+docker-compose exec db psql -U postgres -c '\l'
+
+# postgres select
+docker-compose exec db psql -U postgres -c 'SELECT * FROM'
+
+# Parar e remover itens associados 
+docker-compose down
