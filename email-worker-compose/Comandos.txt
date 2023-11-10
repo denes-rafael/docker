@@ -12,3 +12,6 @@ docker-compose exec db psql -U postgres -c 'SELECT * FROM'
 
 # Parar e remover itens associados 
 docker-compose down
+
+# Verificar a criação do banco 
+docker-compose exec db psql -U postgres -f /scripts/check.sql
