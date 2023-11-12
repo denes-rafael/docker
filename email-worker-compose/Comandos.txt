@@ -7,9 +7,6 @@ docker-compose ps
 # Executar comando no postgres para listar tabelas existentes
 docker-compose exec db psql -U postgres -c '\l'
 
-# postgres select
-docker-compose exec db psql -U postgres -c 'SELECT * FROM'
-
 # Parar e remover itens associados 
 docker-compose down
 
@@ -18,3 +15,6 @@ docker-compose exec db psql -U postgres -f /scripts/check.sql
 
 # Logs
 docker-compose logs -f -t
+
+# Consulta banco
+docker-compose exec db psql -U postgres -d email_sender -c 'SELECT * FROM emails'
