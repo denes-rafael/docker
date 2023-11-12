@@ -18,3 +18,9 @@ docker-compose logs -f -t
 
 # Consulta banco
 docker-compose exec db psql -U postgres -d email_sender -c 'SELECT * FROM emails'
+
+# Iniciar containeres de forma escalada (informar quantas instancias são necessárias para executar)
+docker-compose up -d --scale worker=3
+
+# Exibir logs do worker
+docker-compose logs -ft worker
